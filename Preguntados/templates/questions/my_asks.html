@@ -1,11 +1,18 @@
 {% extends 'base/master.html' %}
 
 {% block title %}
-Preguntados
+Mis Preguntas
 {% endblock %}
 
 
 {% block content %}
+
+<div class="card bg-info mt-4">
+    <div class="card-body">
+        <h2 class="card-title">{{ user.username|upper }}</h2>
+        <p class="card-text">{{ user.about_me|default_if_none:'Algo sobre mi' }}</p>
+    </div>
+</div>
 
 {% for ask in asks %}
 <div class="card bg-light mt-4">

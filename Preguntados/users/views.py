@@ -2,8 +2,7 @@ from django.contrib.auth import authenticate
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from .forms import UserForm
-from django.contrib.auth import authenticate, login
-
+from django.contrib.auth import authenticate, login, logout
 
 
 def login_view(request):
@@ -20,3 +19,7 @@ def login_view(request):
         form = UserForm()
 
     return render(request, 'users/login.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return redirect(reverse('login-view'))
