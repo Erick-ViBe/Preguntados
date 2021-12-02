@@ -18,9 +18,11 @@ Mis Preguntas
 <div class="card bg-light mt-4">
     <div class="card-body">
         <div class="d-flex justify-content-between">
-            <h3 class="card-title">
-                {{ ask.title }}
-            </h3>
+            <a href="{% url 'question-detail' ask.id %}">
+                <h3 class="card-title">
+                    {{ ask.title }}
+                </h3>
+            </a>
             <h5 class="card-title">
                 {{ ask.author }}
             </h5>
