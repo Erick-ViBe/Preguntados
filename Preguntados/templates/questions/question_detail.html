@@ -14,7 +14,7 @@ Preguntados
                     {{ question.title }}
                 </h3>
                 <h5 class="card-title">
-                    {{ question.author }}
+                    {{ question.author|default_if_none:"" }}
                 </h5>
             </div>
             <p class="card-text mt-3">{{ question.content }}</p>
@@ -52,7 +52,7 @@ Preguntados
         <form method="POST">{% csrf_token %}
             <div class="modal-body">    
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"  style="height: 150px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"  style="height: 150px" name="new_comment"></textarea>
                     <label for="floatingTextarea">Nueva Respuesta</label>
                 </div>
             </div>

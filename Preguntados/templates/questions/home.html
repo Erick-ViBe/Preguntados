@@ -17,7 +17,7 @@ Preguntados
                 </h3>
             </a>
             <h5 class="card-title">
-                {{ ask.author }}
+                {{ ask.author|default_if_none:"" }}
             </h5>
         </div>
         <p class="card-text">{{ ask.content|truncatechars:400 }}</p>
