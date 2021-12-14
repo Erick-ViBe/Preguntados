@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-MX'
 
 TIME_ZONE = 'UTC'
 
@@ -121,6 +121,8 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_URL = 'login-view'
+LOGIN_REDIRECT_URL = 'home-view'
+LOGOUT_REDIRECT_URL = 'login-view'
 
 
 # Static files (CSS, JavaScript, Images)
